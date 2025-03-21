@@ -3,7 +3,7 @@ const inputs = document.querySelectorAll('#cont input');
 
 // Autofocus the first input on page load
 window.onload = () => {
-    inputs[0].focus(); 
+    //inputs[0].focus(); 
 };
 
 // Handle click event for focusing input
@@ -45,3 +45,12 @@ con.addEventListener('keydown', (e) => {
         }
     }
 });
+const btn = document.querySelector('button');
+btn.addEventListener('click',()=>{
+	let v = '';
+	inputs.forEach((e)=>{
+		v+=e.value;
+	});
+	document.getElementById('otp').innerText = `Entered OTP is ${v}`;
+});
+
