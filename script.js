@@ -20,7 +20,7 @@ con.addEventListener('keydown', (e) => {
     // Handle Backspace
     if (e.key === 'Backspace' && currentIndex > 0) {
         e.preventDefault();
-        e.target.value = ''; // Clear current input
+        e.target.value = '-'; // Clear current input
         inputs[currentIndex - 1].focus(); // Move focus to previous input
     }
 
